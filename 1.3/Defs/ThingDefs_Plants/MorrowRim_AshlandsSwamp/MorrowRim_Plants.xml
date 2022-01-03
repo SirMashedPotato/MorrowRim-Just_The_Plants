@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- weeping parasol -->
+	
+	<ThingDef ParentName="TreeBase">
+		<defName>MorrowRim_WeepingParasol</defName>
+		<label>weeping parasol mushroom</label>
+		<description>A giant mushroom found often in the ashlands swamp. Takes a considerable time to grow and does not need light. The stem hardens as the mushroom ages, eventually hardening into an almost wood-like material.\n\nRequires soil with a high level of fertility to grow.</description>
+		<graphicData>
+		  <texPath>MorrowRim/Plants/MorrowRim_WeepingParasol</texPath>
+		  <graphicClass>Graphic_Random</graphicClass>
+		  <shadowData>
+			<volume>(0.2, 0.35, 0.13)</volume>
+			<offset>(-0.03,0,-0.44)</offset>
+		  </shadowData>
+		</graphicData>
+		<statBases>
+		  <Beauty>2</Beauty>
+		</statBases>
+		<plant>
+		  <fertilitySensitivity>1.0</fertilitySensitivity>
+		  <fertilityMin>1.0</fertilityMin>
+		  <growMinGlow>0.0</growMinGlow>
+		  <dieIfLeafless>false</dieIfLeafless>
+		  <neverBlightable>true</neverBlightable>
+		  <growDays>40</growDays>
+		  <visualSizeRange>1.3~2.8</visualSizeRange>
+		  <harvestWork>1000</harvestWork>
+		  <harvestYield>60</harvestYield>
+		  <wildClusterWeight>45</wildClusterWeight>
+		  <sowMinSkill>10</sowMinSkill>
+		  <sowResearchPrerequisites>
+				<li>TreeSowing</li>
+				<li>MorrowRim_AshSowing</li>
+		  </sowResearchPrerequisites>
+		  <mustBeWildToSow>false</mustBeWildToSow>
+		</plant>
+	</ThingDef>
+
+	<!-- Miasma sponge -->
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>MorrowRim_MiasmaSponge</defName>
+		<label>miasma sponge mushroom</label>
+		<description>A sponge like fungus that only grows in the ashlands swamp. Like the muck sponge, of which it is closely related too, the miasma sponge slowly fills its interior with a byproduct of digestion. However, unlike the muck sponge, once capacity is reach, the byproduct is released in an aerosolized spray, creating a long lasting cloud of toxic air.</description>
+		<statBases>
+		  <MaxHitPoints>195</MaxHitPoints>
+		  <Nutrition>0.3</Nutrition>
+		</statBases>
+		<altitudeLayer>Building</altitudeLayer>
+		<graphicData>
+		  <texPath>MorrowRim/Plants/MorrowRim_MiasmaSponge</texPath>
+		  <graphicClass>Graphic_Random</graphicClass>
+		  <shadowData>
+			<volume>(0.3, 0.25, 0.13)</volume>
+			<offset>(-0.03,0,-0.44)</offset>
+		  </shadowData>
+		</graphicData>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<pathCost>130</pathCost>
+		<blockWind>false</blockWind>
+		<ingestible>
+			<foodType>Tree</foodType>
+			<preferability>RawBad</preferability>
+		</ingestible>
+		<plant>
+		  <sowWork>4000</sowWork>
+		  <fertilitySensitivity>0.4</fertilitySensitivity>
+		  <fertilityMin>1.0</fertilityMin>
+		  <growMinGlow>0.4</growMinGlow>
+		  <growOptimalGlow>1</growOptimalGlow>
+		  <dieIfLeafless>false</dieIfLeafless>
+		  <sowTags>
+			<li>Ground</li>
+		  </sowTags>
+		  <sowMinSkill>10</sowMinSkill>
+		  <blockAdjacentSow>true</blockAdjacentSow>
+		  <sowResearchPrerequisites>
+				<li>MorrowRim_AshSowing__Fragile</li>
+		  </sowResearchPrerequisites>
+		  <topWindExposure>0.0</topWindExposure>
+		  <neverBlightable>false</neverBlightable>
+		  <growDays>8</growDays>
+		  <visualSizeRange>1.8~2.2</visualSizeRange>
+		  <wildOrder>2</wildOrder>
+		  <!--<immatureGraphicPath>MorrowRim/Plants_Immature/MorrowRim_MuckSpongeImmature</immatureGraphicPath>-->
+		  <harvestAfterGrowth>0.30</harvestAfterGrowth>
+		  <harvestMinGrowth>0.50</harvestMinGrowth>
+		  <interferesWithRoof>false</interferesWithRoof>
+		</plant>
+		<comps>
+			<li Class="MorrowRim_AshSwamp.CompProperties_PlantSpawner">
+				<thing>MorrowRim_GasMiasma</thing>
+				<amount>1</amount>
+				<radius>2</radius>
+				<growthMin>0.80</growthMin>
+				<sound>MorrowRim_Hiss</sound>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Slough Fern -->
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>MorrowRim_SloughFern</defName>
+		<label>slough fern</label>
+		<description>A fern that only grows on marshy terrain in the ashlands swamp, though with enough care it can grow almost anywhere.\n\nThe spore pods of the slough fern are often used in making an elixir that aids the body in cleansing toxic buildup.</description>
+		<statBases>
+		  <MaxHitPoints>45</MaxHitPoints>
+		  <Beauty>3</Beauty>
+		  <BeautyOutdoors>3</BeautyOutdoors>
+		  <Nutrition>0.05</Nutrition>
+		</statBases>
+		<graphicData>
+		  <texPath>MorrowRim/Plants/MorrowRim_SloughFern</texPath>
+		  <graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<ingestible />
+		<plant>
+		  <fertilityMin>0.8</fertilityMin>
+		  <sowResearchPrerequisites>
+			<li>MorrowRim_AshSowing__Fragile</li>
+		  </sowResearchPrerequisites>
+		  <dieIfLeafless>true</dieIfLeafless>
+		  <harvestTag>Standard</harvestTag>
+		  <sowWork>1000</sowWork>
+		  <sowTags>
+			<li>Ground</li>
+		  </sowTags>
+		  <growMinGlow>0.3</growMinGlow>
+		  <topWindExposure>0.1</topWindExposure>
+		  <growDays>1.2</growDays>
+		  <lifespanDaysPerGrowDays>3</lifespanDaysPerGrowDays>
+		  <visualSizeRange>0.5~1.2</visualSizeRange>
+		  <wildOrder>1</wildOrder>
+		  <wildClusterRadius>2</wildClusterRadius>
+		  <wildClusterWeight>4</wildClusterWeight>
+		  <immatureGraphicPath>MorrowRim/Plants/MorrowRim_SloughFern_Immature</immatureGraphicPath>
+		  <harvestedThingDef>MorrowRim_SloughSporePod</harvestedThingDef>
+		  <harvestYield>6</harvestYield>
+		  <purpose>Health</purpose>
+		</plant>
+	</ThingDef>
+
+</Defs>

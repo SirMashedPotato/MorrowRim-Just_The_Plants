@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>MorrowRim - Just the Plants</name>
+	<packageId>SirMashedPotato.MorrowRim.JustThePlants</packageId>
+	<author>SirMashedPotato</author>
+	<supportedVersions>
+    	<li>1.3</li>
+	</supportedVersions>
+	<description>A standalone version of the growable plants from the MorrowRim biome mods, including anything directly relevant to them.\n\nBased on the 'Elder Scrolls' series by Bethesda Game Studios.
+	</description>
+	
+	<modDependenciesByVersion>
+	</modDependenciesByVersion>
+	<loadAfter>
+	</loadAfter>
+	<incompatibleWith>
+      <li>SirMashedPotato.MorrowRim</li>
+      <li>SirMashedPotato.MorrowRim.AshSwamp</li>
+      <li>SirMashedPotato.MorrowRim.VolcanicAshlands</li>
+      <li>SirMashedPotato.MorrowRim.BiomesPatch</li>
+    </incompatibleWith>
+</ModMetaData>

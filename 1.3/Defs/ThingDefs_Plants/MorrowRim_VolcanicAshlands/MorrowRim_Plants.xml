@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Fire Fern Sown -->
+	
+	<ThingDef ParentName="PlantBase">
+		<defName>MorrowRim_FireFernSown</defName>
+		<label>fire fern</label>
+		<description>A small fern that can often be found growing in the volcanic ashlands. It's ability to grow in poor quality soil, and resistance to extreme heat, has allowed it to grow where no other ferns dare.</description>
+		<statBases>
+		  <MaxHitPoints>30</MaxHitPoints>
+		  <Beauty>10</Beauty>
+		  <BeautyOutdoors>10</BeautyOutdoors>
+		  <Nutrition>0.2</Nutrition>
+		  <Flammability>0.2</Flammability>
+		</statBases>
+		<pathCost>3</pathCost>
+		<graphicData>
+		  <texPath>MorrowRim/Plants/MorrowRim_FireFern</texPath>
+		</graphicData>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<hideAtSnowDepth>0.5</hideAtSnowDepth>
+		<ingestible />
+		<plant>
+		  <fertilityMin>0.2</fertilityMin>
+		  <fertilitySensitivity>0.6</fertilitySensitivity>
+		  <growDays>3.5</growDays>
+		  <growMinGlow>0.3</growMinGlow>
+		  <harvestWork>60</harvestWork>
+		  <maxMeshCount>1</maxMeshCount>
+		  <visualSizeRange>0.95~1.15</visualSizeRange>
+		  <topWindExposure>0.2</topWindExposure>
+		  <wildClusterRadius>3</wildClusterRadius>
+		  <wildClusterWeight>40</wildClusterWeight>
+		  <sowTags>
+			<li>Ground</li>
+			<li>Decorative</li>
+		  </sowTags>
+		  <purpose>Beauty</purpose>
+		  <sowResearchPrerequisites>
+				<li>MorrowRim_AshSowing</li>
+		  </sowResearchPrerequisites>
+		</plant>
+	</ThingDef>
+
+	<!-- leather cap -->
+	
+	<ThingDef ParentName="TreeBase">
+		<defName>MorrowRim_LeatherCap</defName>
+		<label>leather cap mushroom</label>
+		<description>A giant mushroom only found in the volcanic ashlands. It's leather like covering protects it from the intense heat, and from catching on fire. The stem hardens as the mushroom ages, eventually hardening into an almost wood-like material.\n\nRequires soil with a high level of fertility to grow, but can grow without light.</description>
+		<graphicData>
+		  <texPath>MorrowRim/Plants/MorrowRim_LeatherCap</texPath>
+		  <graphicClass>Graphic_Random</graphicClass>
+		  <shadowData>
+			<volume>(0.2, 0.35, 0.13)</volume>
+			<offset>(-0.03,0,-0.44)</offset>
+		  </shadowData>
+		</graphicData>
+		<statBases>
+		  <Beauty>2</Beauty>
+		  <BeautyOutdoors>2</BeautyOutdoors>
+		  <Flammability>0.2</Flammability>
+		</statBases>
+		<plant>
+		  <fertilitySensitivity>1.0</fertilitySensitivity>
+		  <fertilityMin>1.2</fertilityMin>
+		  <growMinGlow>-0.5</growMinGlow>
+		  <growOptimalGlow>0.9</growOptimalGlow>
+		  <dieIfLeafless>false</dieIfLeafless>
+		  <neverBlightable>true</neverBlightable>
+		  <growDays>30</growDays>
+		  <visualSizeRange>1.5~2.6</visualSizeRange>
+		  <harvestWork>1000</harvestWork>
+		  <harvestYield>40</harvestYield>
+		  <wildClusterWeight>45</wildClusterWeight>
+		  <sowMinSkill>10</sowMinSkill>
+		  <sowResearchPrerequisites>
+				<li>TreeSowing</li>
+				<li>MorrowRim_AshSowing</li>
+		  </sowResearchPrerequisites>
+		  <mustBeWildToSow>false</mustBeWildToSow>
+		  <wildEqualLocalDistribution>false</wildEqualLocalDistribution>
+		</plant>
+	</ThingDef>
+
+</Defs>

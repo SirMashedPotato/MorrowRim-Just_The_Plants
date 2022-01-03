@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="RoughPlantBase">
+		<defName>MorrowRim_SloughSporePod</defName>
+		<label>slough spore pod</label>
+		<description>A spore pod harvested from a slough fern. Can be used to make elixirs of purging.</description>
+		<graphicData>
+		  <texPath>MorrowRim/Items/Resources/MorrowRim_SloughSporePod</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>1.3</MarketValue>
+		  <Flammability>1.6</Flammability>
+		  <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+		  <Nutrition>0.01</Nutrition>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>30</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+		</comps>
+		<thingCategories>
+		  <li>PlantMatter</li>
+		  <li>Foods</li>
+		</thingCategories>
+		<ingestible>
+		  <foodType>VegetableOrFruit</foodType>
+		  <preferability>DesperateOnly</preferability>
+		</ingestible>
+		<tradeTags>
+			<li>AshlandRawPlant</li>
+		</tradeTags>
+	</ThingDef>
+  
+</Defs>

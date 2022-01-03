@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Eating -->
+
+	<ThoughtDef>
+		<defName>MorrowRim_ateScathecraw</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+		  <li>
+			<label>ate raw scathecraw</label>
+			<description>It's like eating old leather.</description>
+			<baseMoodEffect>-8</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>MorrowRim_ateCorkbulb</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+		  <li>
+			<label>ate raw corkbulb</label>
+			<description>I'd rather eat scathecraw.</description>
+			<baseMoodEffect>-10</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MorrowRim_ateMuck</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+		  <li>
+			<label>consumed muck</label>
+			<description>I think I need a bucket.</description>
+			<baseMoodEffect>-15</baseMoodEffect>
+		  </li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>
