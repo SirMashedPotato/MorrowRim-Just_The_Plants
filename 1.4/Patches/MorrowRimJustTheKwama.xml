@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>MorrowRim - Just the Kwama</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<RecipeDef>
+							<defName>MorrowRim_MakeMedicince_FromMuckAndKwamaEgg</defName>
+							<label>refine muck using kwama eggs</label>
+							<description>Refines 20 buckets of muck and 2 kwama egg into 8 herbal medicine.</description>
+							<jobString>Refining herbal medicine from muck.</jobString>
+							<effectWorking>Cremate</effectWorking>
+							<soundWorking>Recipe_Cremate</soundWorking>
+							<workAmount>500</workAmount>
+							<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+							<recipeUsers>
+								<li>DrugLab</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>MorrowRim_Muck</li>
+										</thingDefs>
+									</filter>
+									<count>20</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>MorrowRim_KwamaEgg</li>
+										</thingDefs>
+									</filter>
+									<count>2</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>MorrowRim_Muck</li>
+									<li>MorrowRim_KwamaEgg</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<MedicineHerbal>8</MedicineHerbal>
+							</products>
+							<researchPrerequisite>MorrowRim_MuckRefining_Efficient</researchPrerequisite>
+							<workSkill>Medicine</workSkill>
+						</RecipeDef>
+						<ResearchProjectDef>
+							<defName>MorrowRim_MuckRefining_Efficient</defName>
+							<label>efficient muck refining</label>
+							<description>Allows the refining of muck at a drug lab using kwama eggs.</description>
+							<baseCost>500</baseCost>
+							<techLevel>Neolithic</techLevel>
+							<prerequisites>
+								<li>MorrowRim_MuckRefining_Inefficient</li>
+							</prerequisites>
+							<researchViewX>2.00</researchViewX>
+							<researchViewY>2.00</researchViewY>
+							<tab>MorrowRim_Tab</tab>
+						</ResearchProjectDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
