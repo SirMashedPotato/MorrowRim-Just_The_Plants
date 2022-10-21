@@ -8,6 +8,6 @@
 	<v1.4>
 		<li>Common</li>
 		<li>1.4</li>	
-		<li IfModActive="VanillaExpanded.VCookE">Mods/VanillaCookingExpanded</li>
+		<li IfModActive="VanillaExpanded.VCookE">1.4/Mods/VanillaCookingExpanded</li>
 	</v1.4>
 </loadFolders>
